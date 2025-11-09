@@ -1,0 +1,64 @@
+.assignments-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 5px 6px 6px rgba(0, 0, 0, 0.1);
+    padding: 27px;
+    max-width: 700px;
+    width: 330px;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .assignments-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+  }
+  
+  .assignments-header h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2D3748;
+    margin: 0;
+  }
+  
+  .due-date {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+  }
+  
+  .due-date svg {
+    color: #718096;
+  }
+  
+  .due-date span:first-of-type {
+    font-size: 0.75rem;
+    color: #718096;
+  }
+  
+  .due-date span:last-of-type {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #2D3748;
+  }
+  
+  .divider {
+    height: 1px;
+    background-color: #E2E8F0;
+    margin: 16px 0;
+  }
+  
+  .assignment-content h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2D3748;
+    margin: 0 0 8px 0;
+  }
+  
+  .assignment-content p {
+    font-size: 0.875rem;
+    color: #4A5568;
+    margin: 0;
+  }

@@ -1,0 +1,97 @@
+.sidebar {
+  width: 200px;
+  background-color: #ffffff;
+  padding: 20px 10px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.main-menu,
+.bottom-menu {
+  list-style: none; /* إزالة النقاط الافتراضية من القوائم */
+  padding: 0;
+  margin: 0;
+}
+
+.main-menu li,
+.bottom-menu li {
+  padding: 15px 10px;
+  cursor: pointer;
+  color: #333;
+  transition: background-color 0.3s ease;
+  list-style: none; /* التأكد من إزالة النقاط من العناصر الفردية */
+}
+
+/* التبويبات الرئيسية */
+.main-menu li:not(.menu-item),
+.bottom-menu li {
+  display: flex;
+  align-items: center;
+}
+
+/* الخلفية الحمراء الفاتحة لـ "Employees" فقط */
+.menu-header:hover,
+.menu-header.active {
+  background-color: #ffcccc; /* أحمر فاتح عند المرور أو التفعيل */
+}
+
+/* التبويبات الرئيسية الأخرى عند التفعيل */
+.main-menu li.active:not(.menu-item),
+.bottom-menu li.active {
+  background-color: #ff6666; /* أحمر غامق عند التفعيل */
+  font-weight: bold;
+}
+
+.icon {
+  margin-right: 8px;
+  font-size: 20px;
+}
+
+.text {
+  flex-grow: 1;
+}
+
+.menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+}
+
+.menu-header .icon {
+  margin-right: 8px;
+}
+
+.menu-header .arrow {
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+.menu-header .arrow.open {
+  transform: rotate(180deg);
+}
+
+/* التبويبات الفرعية */
+.main-menu .submenu {
+  list-style: none; /* إزالة النقاط من التبويبات الفرعية */
+  padding: 0 0 0 20px; /* هامش يسار للتبويبات الفرعية */
+}
+
+.main-menu .submenu li {
+  padding: 10px 10px;
+  font-size: 14px;
+  color: #555;
+  background-color: #ffffff; /* خلفية بيضاء ثابتة */
+  list-style: none; /* التأكد من إزالة النقاط */
+}
+
+.main-menu .submenu li:hover,
+.main-menu .submenu li.active {
+  background-color: #ffffff; /* بدون تغيير للخلفية */
+  color: #ff6666; /* تغيير لون النص فقط عند التفعيل */
+  font-weight: bold;
+}

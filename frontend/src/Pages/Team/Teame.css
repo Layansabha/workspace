@@ -1,0 +1,590 @@
+:root {
+    --primary-color: #4361ee;
+    --primary-light: #eef2ff;
+    --secondary-color: #3f37c9;
+    --accent-color: #4895ef;
+    --success-color: #10b981;
+    --warning-color: #f59e0b;
+    --danger-color: #ef4444;
+    --dark-color: #2b2d42;
+    --light-color: #f8f9fa;
+    --text-color: #495057;
+    --text-light: #6c757d;
+    --border-color: #e2e8f0;
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Base Styles */
+  .team-app-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f8fafc;
+  }
+  
+  .team-main-content {
+    flex: 1;
+    padding: 2rem;
+    overflow-x: auto;
+  }
+  
+  /* Header Styles */
+  .team-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .header-left h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    margin: 0;
+  }
+  
+  .team-count {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-top: 0.25rem;
+  }
+  
+  /* Search and Filter */
+  .team-actions {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .search-icon {
+    position: absolute;
+    left: 12px;
+    color: var(--text-light);
+  }
+  
+  .search-container input {
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    width: 250px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+  }
+  
+  .search-container input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+  }
+  
+  .button-group {
+    display: flex;
+    gap: 0.75rem;
+  }
+  
+  /* Button Styles */
+  .add-member-btn {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+    font-size: 0.95rem;
+  }
+  
+  .add-member-btn:hover {
+    background: var(--secondary-color);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .add-member-btn:active {
+    transform: translateY(0);
+  }
+  
+  .filter-btn {
+    background: white;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+  }
+  
+  .filter-btn:hover {
+    background: var(--light-color);
+    border-color: var(--primary-light);
+  }
+  
+  /* Filter Container */
+  .filters-container {
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .filter-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .filter-section h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 0.75rem;
+  }
+  
+  .filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .filter-option {
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background: white;
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  
+  .filter-option:hover {
+    background: var(--light-color);
+  }
+  
+  .filter-option.active {
+    background: var(--primary-color);
+    color: white;
+    border-color: var(--primary-color);
+  }
+  
+  /* Status Dot */
+  .status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+  
+  .status-dot.active {
+    background: var(--success-color);
+  }
+  
+  .status-dot.away {
+    background: var(--warning-color);
+  }
+  
+  .status-dot.busy {
+    background: var(--danger-color);
+  }
+  
+  /* Team Table */
+  .team-table-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    overflow: hidden;
+  }
+  
+  .team-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .team-table th {
+    text-align: left;
+    padding: 1rem;
+    font-weight: 600;
+    color: var(--dark-color);
+    background: var(--light-color);
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .team-table th:hover {
+    background: #f1f5f9;
+  }
+  
+  .team-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    vertical-align: middle;
+  }
+  
+  .team-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .team-table tr:hover td {
+    background: var(--light-color);
+  }
+  
+  /* Member Info */
+  .member-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .member-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .member-name {
+    font-weight: 500;
+    color: var(--dark-color);
+  }
+  
+  .member-email {
+    font-size: 0.85rem;
+    color: var(--text-light);
+  }
+  
+  /* Department Tags */
+  .department-tag {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+  
+  .department-tag.design {
+    background: #f0f9ff;
+    color: #0369a1;
+  }
+  
+  .department-tag.development {
+    background: #f0fdf4;
+    color: #15803d;
+  }
+  
+  .department-tag.management {
+    background: #fef2f2;
+    color: #b91c1c;
+  }
+  
+  .department-tag.marketing {
+    background: #fdf2f8;
+    color: #9d174d;
+  }
+  
+  /* Completion Bar */
+  .completion-bar-container {
+    position: relative;
+    height: 24px;
+    background: #f1f5f9;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .completion-bar {
+    height: 100%;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+  }
+  
+  .completion-bar-container span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: white;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Status Cell */
+  .status-cell {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  /* Action Buttons */
+  .action-buttons {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .message-btn, .profile-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: none;
+    color: var(--text-color);
+    background: var(--light-color);
+  }
+  
+  .message-btn:hover {
+    background: var(--primary-light);
+    color: var(--primary-color);
+  }
+  
+  .profile-btn:hover {
+    background: #f0fdf4;
+    color: var(--success-color);
+  }
+  
+  /* No Results */
+  .no-results {
+    padding: 2rem;
+    text-align: center;
+    color: var(--text-light);
+  }
+  
+  /* Modal Styles */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    backdrop-filter: blur(4px);
+  }
+  
+  .add-member-modal {
+    background: white;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 600px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+    animation: modalFadeIn 0.3s ease;
+    box-shadow: var(--shadow-lg);
+  }
+  
+  @keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .add-member-modal.success {
+    text-align: center;
+    padding: 3rem 2rem;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--text-light);
+    transition: all 0.2s ease;
+    padding: 0.5rem;
+    border-radius: 50%;
+  }
+  
+  .close-btn:hover {
+    background: var(--light-color);
+    color: var(--dark-color);
+  }
+  
+  .add-member-modal h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: var(--dark-color);
+  }
+  
+  /* Form Styles */
+  .form-row {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .form-group {
+    flex: 1;
+    margin-bottom: 1rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--dark-color);
+  }
+  
+  .form-group input,
+  .form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+  }
+  
+  .form-group input:focus,
+  .form-group select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .cancel-btn {
+    padding: 0.75rem 1.5rem;
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .cancel-btn:hover {
+    background: var(--light-color);
+  }
+  
+  .submit-btn {
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .submit-btn:hover {
+    background: var(--secondary-color);
+  }
+  
+  .submit-btn.adding {
+    opacity: 0.8;
+    cursor: not-allowed;
+  }
+  
+  /* Success Message */
+  .success-message h3 {
+    color: var(--success-color);
+    margin-bottom: 0.5rem;
+  }
+  
+  .success-message p {
+    color: var(--text-light);
+    margin-bottom: 0;
+  }
+  
+  .success-icon {
+    color: var(--success-color);
+    margin-bottom: 1rem;
+    animation: bounceIn 0.5s ease;
+  }
+  
+  @keyframes bounceIn {
+    0% { transform: scale(0); opacity: 0; }
+    60% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+  }
+  
+  /* Loading Animation */
+  .spin {
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .team-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .team-actions {
+      width: 100%;
+    }
+    
+    .search-container input {
+      width: 100%;
+    }
+    
+    .form-row {
+      flex-direction: column;
+      gap: 0;
+    }
+    
+    .team-table th, .team-table td {
+      padding: 0.75rem;
+    }
+    
+    .member-info {
+      gap: 0.5rem;
+    }
+    
+    .member-avatar {
+      width: 32px;
+      height: 32px;
+    }
+  }

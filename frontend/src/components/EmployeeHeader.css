@@ -1,0 +1,79 @@
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 10px 20px;
+  background: #fff;
+  border-bottom: 2px solid #f3e0e0;
+}
+
+.logo h1 {
+  margin: 0;
+  color: #000;
+  font-family: "Anta", system-ui, sans-serif;
+  font-size: 20px;
+}
+
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  width: 260px;
+  padding: 8px 12px 8px 34px;
+  border: 1px solid #eacdcd;
+  border-radius: 6px;
+  background: #dccbcb;
+  color: #111;
+  font-family: "Anta", system-ui, sans-serif;
+  font-size: 14px;
+}
+
+.search-bar input::placeholder {
+  color: #777;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  font-size: 14px;
+  color: #777;
+}
+
+.notification-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.notification-icon:hover {
+  transform: translateY(-1px);
+  opacity: 0.95;
+}
+
+.bell-icon {
+  font-size: 20px;
+  color: #777;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  width: 9px;
+  height: 9px;
+  background: #ff0000;
+  border-radius: 50%;
+}

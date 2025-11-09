@@ -1,0 +1,42 @@
+.Courses2{
+    position: absolute;
+    top:8% ;
+    left:20% ;
+    float:left;
+}
+.AllStatus{
+    position: absolute;
+    top:53% ;
+    left:20% ;
+    float:left;
+}
+.STUDYSTATISTICS{
+    position: absolute;
+   top:78% ;
+    left:20% ;
+    float:left;
+}
+.Overview{
+    position: absolute;
+   top:78% ;
+    left:39% ;
+    float:left;
+}
+.Progress{
+    position: absolute;
+   bottom:50% ;
+    left:73% ;
+    float:left;
+}
+.LiveEvents{
+    position: absolute;
+   bottom:18% ;
+    left:73% ;
+    float:left;
+}
+.Assignments{
+    position: absolute;
+   top:85% ;
+    left:73% ;
+    float:left;
+}

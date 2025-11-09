@@ -1,0 +1,364 @@
+/* صفحة الداشبورد الأساسية */
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  background: #ffcccc;
+}
+
+/* الحاوية */
+.dashboard-container {
+  padding: 20px;
+  height: calc(100vh - 60px); /* لو عندك Header ثابت */
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* يسار كبير + يمين أصغر */
+  gap: 20px;
+}
+
+/* الأعمدة */
+.left-column,
+.right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* كروت عامة */
+.event-container,
+.pending-container,
+.clock-container,
+.off-container,
+.job-applications-container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+}
+
+/* عناوين */
+.events-header,
+.clock-header,
+.pending-header,
+.off-header,
+.job-applications-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.calendar-header {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #ffcccc;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  border: 0;
+}
+
+/* شبكة الأيام */
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.day-column {
+  border: 1px solid #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.day-label {
+  background: #ffcccc;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.event-type-section {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.event-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.event-images {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.employee-img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid #ddd;
+}
+.more-employees {
+  background: #eee;
+  border-radius: 50%;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #555;
+}
+.no-events {
+  color: #999;
+  font-size: 13px;
+}
+.event-divider-horizontal {
+  height: 1px;
+  background: #eee;
+  margin: 6px 0;
+  width: 100%;
+}
+
+.event-legend {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+/* Pending */
+.pending-content {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  gap: 16px;
+}
+.pending-divider {
+  width: 1px;
+  background: #e5e5e5;
+}
+.pending-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pending-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.pending-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.approval-actions {
+  margin-top: 8px;
+  display: flex;
+  gap: 8px;
+}
+.approve-btn,
+.reject-btn,
+.send-btn {
+  padding: 6px 12px;
+  border: 0;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.approve-btn {
+  background: #28a745;
+  color: #fff;
+}
+.reject-btn {
+  background: #dc3545;
+  color: #fff;
+}
+.send-btn {
+  background: #007bff;
+  color: #fff;
+}
+
+.attendance-bar-container {
+  position: relative;
+  width: 120px;
+  height: 10px;
+  background: #eee;
+  border-radius: 5px;
+}
+.attendance-bar {
+  height: 100%;
+  background: #ffeb3b;
+  border-radius: 5px;
+}
+.attendance-text {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 11px;
+  color: #333;
+}
+
+/* Clock */
+.clock-details {
+  background: #ffcccc;
+  padding: 10px;
+  border-radius: 6px;
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.time-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.clock-button {
+  background: #ff0000;
+  color: #fff;
+  border: 0;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.clock-button.clocked-in {
+  background: #000;
+}
+.arrow {
+  font-size: 18px;
+}
+.right-arrow {
+  margin-left: 6px;
+}
+.left-arrow {
+  margin-right: 6px;
+  transform: rotate(180deg);
+}
+
+/* Who’s off + job apps */
+.off-list,
+.job-applications-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.off-item,
+.job-application-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.off-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.job-application-icon {
+  font-size: 36px;
+}
+
+/* Modals + toast */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+.date-picker-modal,
+.clock-out-modal,
+.clock-out-message,
+.add-event-modal,
+.view-all-modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  width: min(560px, 92vw);
+}
+.clock-out-message {
+  text-align: center;
+}
+.note-input {
+  width: 100%;
+  min-height: 70px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 8px;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+.modal-buttons button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 0;
+  cursor: pointer;
+}
+.modal-buttons button:first-child {
+  background: #ddd;
+}
+.modal-buttons button:last-child {
+  background: #ffcccc;
+  font-weight: 700;
+}
+
+/* Success toast */
+.success-alert {
+  background: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .events-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .content-wrapper {
+    grid-template-columns: 1.4fr 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,68 @@
+.points-container {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 6px;
+}
+
+.points-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.points-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.points-hexagon {
+  width: 99px;
+  height: 111.01px;
+  background-color: #ff0000;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  margin-right: 40px;
+}
+
+.points-value {
+  font-size: 36px;
+  font-weight: bold;
+  color: #000;
+}
+
+.points-list {
+  margin-bottom: 15px;
+}
+
+.points-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.points-item:last-child {
+  border-bottom: none;
+}
+
+.points-dot {
+  height: 10px;
+  width: 10px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.view-all-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}

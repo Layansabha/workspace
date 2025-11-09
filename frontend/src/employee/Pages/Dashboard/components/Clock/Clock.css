@@ -1,0 +1,93 @@
+.clock-container {
+  width: 350px;
+  height: 180px;
+  max-width: 400px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+.clock-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #f0f0f0;
+  font-weight: bold;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.clock-header .date {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.clock-details {
+  padding: 15px;
+}
+
+.clock-times {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.first-in, .last-out {
+  font-size: 0.8rem;
+}
+
+.clock-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  gap: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.clock-btn:hover {
+  background-color: #c0392b;
+}
+
+.clock-btn.clocked-in {
+  background-color: #2ecc71;
+}
+
+.clock-btn.clocked-in:hover {
+  background-color: #27ae60;
+}
+
+.clock-btn .arrow-icon {
+  stroke: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 400px) {
+  .clock-container {
+    border-radius: 0;
+    box-shadow: none;
+  }
+  
+  .clock-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+  
+  .clock-times {
+    flex-direction: column;
+    gap: 5px;
+  }
+}

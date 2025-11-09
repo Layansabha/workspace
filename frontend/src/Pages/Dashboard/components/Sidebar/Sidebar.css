@@ -1,0 +1,227 @@
+/* Sidebar.css */
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  background-color: #ffffff; /* لون خلفية الشريط الجانبي */
+  color: #000000; /* لون النص أسود */
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.user-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* جعل الصورة دائرية */
+  border: 2px solid #ffffff; /* إطار أبيض حول الصورة */
+  margin-right: 10px; /* مسافة بين الصورة والنص */
+}
+
+.user-info h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #000000; /* لون اسم المستخدم أسود */
+}
+
+.user-info p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #000000; /* لون الوظيفة أسود */
+}
+
+.user-info .role {
+  font-size: 12px;
+  color: #888; /* لون دور المستخدم رمادي */
+}
+
+.more-icon {
+  margin-left: auto; /* نقل علامة النقاط الثلاث إلى أقصى اليمين */
+  font-size: 20px;
+  color: #000000; /* لون النقاط الثلاث أسود */
+  cursor: pointer;
+}
+
+.sidebar-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar-nav li {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: relative; /* لإضافة المؤشر */
+}
+
+.sidebar-nav li.active {
+  background-color: #f3e0e0; /* لون خلفية العنصر النشط */
+  width: 250px;
+}
+
+.sidebar-nav li.active::before {
+  content: '';
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 80%;
+  background-color: #ea3235; /* لون المؤشر */
+  border-radius: 2px;
+}
+
+.sidebar-nav li:hover {
+  background-color: #dccbcb; /* لون الخلفية عند التحويم */
+  width: 250px;
+}
+
+.list-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px; /* مسافة بين الصورة والنص */
+}
+
+.divider {
+  height: 1px;
+  background-color: #e0e0e0; /* لون الخط الفاصل */
+  margin: 20px 0;
+}
+
+.chat-bot {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.chat-bot-image {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px; /* مسافة بين الصورة والنص */
+}
+
+.chat-window {
+  position: absolute;
+  bottom: 60px;
+  left: 260px;
+  width: 300px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 99;
+}
+
+.chat-header {
+  padding: 10px;
+  background-color: #f3e0e0; /* لون خلفية العنوان */
+  border-bottom: 1px solid #e0e0e0;
+  font-weight: bold; /* خط غامق */
+  color: #000000; /* لون النص أسود */
+}
+
+.chat-messages {
+  height: 200px;
+  padding: 10px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+}
+
+.message {
+  margin-bottom: 10px;
+  padding: 8px;
+  border-radius: 5px;
+  max-width: 80%;
+}
+
+.message.user {
+  background-color: #007bff;
+  color: #ffffff;
+  align-self: flex-end;
+}
+
+.message.ai {
+  background-color: #e0e0e0;
+  color: #000000;
+  align-self: flex-start;
+}
+
+.typing-indicator {
+  display: inline-block;
+  padding: 8px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+}
+
+.chat-input {
+  display: flex;
+  padding: 10px;
+  background-color: #ffffff;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.chat-input button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chat-arrow {
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #ffffff;
+  transform: translateY(-50%);
+}
+.back-button {
+  padding: 8px 12px;
+  margin-bottom: 15px;
+  background-color: #f3e0e0;
+  color: #000000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: background-color 0.3s;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.back-button:hover {
+  background-color: #e5c5c5;
+}
+
+/* تحسين عرض عناصر القائمة لتغطية كامل المساحة */
+.sidebar-nav li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+}

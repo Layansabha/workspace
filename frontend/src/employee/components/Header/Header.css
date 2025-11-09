@@ -1,0 +1,177 @@
+/* Header.module.css */
+/* Header.css */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: rgb(255, 255, 255); /* لون خلفية الهيدر */
+  border-bottom: 2px solid #F3E0E0; /* لون الحدود */
+}
+
+.logo h1 {
+  margin: 0;
+  color: #000000; /* لون اللوجو أسود */
+  font-family: 'Anta', sans-serif; /* خط Anta */
+  font-size: 24px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search-bar input {
+  padding: 4px 120px 8px 120px; /* إضافة مسافة على اليسار للأيقونة */
+  border: 1px solid #EACDCD; /* لون حدود حقل البحث */
+  border-radius: 5px;
+  background-color: #dccbcb; /* لون خلفية حقل البحث */
+  color: #EACDCD; /* لون نص حقل البحث */
+  font-family: 'Anta', sans-serif; /* خط Anta */
+  font-size: 16px;
+  width: 200px; /* عرض حقل البحث */
+}
+
+.search-bar input::placeholder {
+  color: #A7A7A7; /* لون نص الـ Placeholder */
+  position:absolute;
+  left: 30px;
+  bottom : 5px;
+ /* margin-left:-85px;*/
+  
+}
+
+.search-icon {
+  position:absolute;
+  left: 10px;
+  color: #A7A7A7; /* لون أيقونة البحث رمادي فاتح */
+  font-size: 16px;
+}
+
+.notification-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.bell-icon {
+  color: #A7A7A7; /* لون أيقونة الجرس رمادي فاتح */
+  font-size: 24px;
+}
+
+.notification-dot {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #FF0000; /* لون النقطة الحمراء */
+  border-radius: 50%;
+}
+.search-bar input:focus {
+  outline: none;
+  border-color: #FF0000; /* تغيير لون الحدود عند التركيز */
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5); /* إضافة ظل أحمر */
+}/* Main Layout Structure */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding: 20px;
+  gap: 20px;
+}
+
+.header {
+  text-align: center;
+}
+
+.main-content {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+}
+
+/* Left Sidebar - Navigation */
+.sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Middle Section - Clock In/Out */
+.clock-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.clock-card {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Right Section - Points and Leaderboard */
+.right-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.points-card, .leaderboard-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.points-details, .leaderboard-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Bottom Section - Courses and Awards */
+.bottom-section {
+  display: flex;
+  gap: 20px;
+}
+
+.courses-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.course-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.awards-card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.award-item, .promotion-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
