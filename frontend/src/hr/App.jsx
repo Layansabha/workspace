@@ -9,6 +9,7 @@ import Attendance from "./components/Attendance";
 import TimeOff from "./components/TimeOff";
 import ManageDepartment from "./components/ManageDepartment";
 import Finance from "./components/Finance";
+import HRProfile from "./Pages/Profile/Profile";
 
 export default function HRApp() {
   const wrap = (node) => (
@@ -26,6 +27,7 @@ export default function HRApp() {
       <Route path="time-off" element={wrap(<TimeOff />)} />
       <Route path="departments" element={wrap(<ManageDepartment />)} />
       <Route path="finance" element={wrap(<Finance />)} />
+      <Route path="profile" element={wrap(<HRProfile />)} />
       <Route path="*" element={<Navigate to="dashboard" replace />} />
     </Routes>
   );

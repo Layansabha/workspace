@@ -1,21 +1,13 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import "./index.css";
+import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter } from "react-router-dom"; // أضف هذا السطر هنا
-import "./src/overrides.css"; // خليه آخر CSS عشان يكسر أي تضارب
+import "./index.css";
+import "./overrides.css";
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      {" "}
-      {/* لف App بداخل BrowserRouter */}
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
 );
-
-// قياس الأداء (اختياري)
-reportWebVitals();

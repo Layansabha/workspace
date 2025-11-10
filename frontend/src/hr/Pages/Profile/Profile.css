@@ -1,0 +1,83 @@
+/* Profile.css */
+.manager-profile {
+  padding: 20px;
+}
+
+.profile-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  max-width: 1000px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+}
+
+.profile-left {
+  display: grid;
+  gap: 12px;
+  align-content: start;
+}
+
+.profile-right {
+  width: 100%;
+}
+
+.avatar {
+  width: 200px;
+  height: 200px;
+  border-radius: 16px;
+  object-fit: cover;
+  background: #f3f4f6;
+}
+
+.avatar-wrap {
+  display: grid;
+  gap: 12px;
+  place-items: start;
+}
+
+.profile-form {
+  display: grid;
+  gap: 12px;
+  margin-top: 0;
+}
+
+.profile-form input,
+.profile-form textarea {
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 10px 12px;
+  background: #fff;
+}
+
+.save-btn,
+.logout-btn,
+.upload-btn {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  cursor: pointer;
+  background: #fff;
+}
+
+.logout-btn {
+  background: #111;
+  color: #fff;
+}
+
+.page-loading {
+  padding: 20px;
+}

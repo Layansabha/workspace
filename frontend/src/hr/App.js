@@ -13,8 +13,8 @@ import TimeOff from "./components/TimeOff";
 import ManageDepartment from "./components/ManageDepartment";
 import Finance from "./components/Finance";
 import ProtectedRoute from "./components/ProtectedRoute";
+import HRProfile from "./Pages/Profile/Profile";
 
-// Layout عام لصفحات HR
 const Layout = () => (
   <div className="app">
     <Sidebar />
@@ -30,10 +30,8 @@ const Layout = () => (
 export default function HRApp() {
   return (
     <Routes>
-      {/* /hr → /hr/dashboard */}
       <Route index element={<Navigate to="dashboard" replace />} />
 
-      {/* كل صفحات HR محمية داخل Layout واحد */}
       <Route
         element={
           <ProtectedRoute>
@@ -47,9 +45,9 @@ export default function HRApp() {
         <Route path="time-off" element={<TimeOff />} />
         <Route path="departments" element={<ManageDepartment />} />
         <Route path="finance" element={<Finance />} />
+        <Route path="profile" element={<HRProfile />} />
       </Route>
 
-      {/* أي مسار غلط */}
       <Route path="*" element={<Navigate to="dashboard" replace />} />
     </Routes>
   );
